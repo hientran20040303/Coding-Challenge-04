@@ -1,3 +1,4 @@
+//  Array of object
 let products = [
     { name: "Laptop", category: "electronics", price: 1000, inventory: 10 },
     { name: "T-Shirt", category: "apparel", price: 25, inventory: 50 },
@@ -7,6 +8,7 @@ let products = [
 ];
 console.table(products);
 
+// Discount based on category
 console.log("- Applying category discounts -");
 for (let product of products) {
     let discountRate = 0;
@@ -30,6 +32,7 @@ for (let product of products) {
     console.log(`Product: ${product.name}, New price: $${product.price.toFixed(2)}`);
 }
 
+// Checkout process for 3 customers, extra discount
 console.log("- Processing orders -");
 let orderData = [
     { customerNum: 1, type: "student", items: ["Laptop", "Headphones"] },
@@ -65,6 +68,7 @@ for (let key in singleProduct) {
     console.log(`${key}: ${singleProduct[key]}`);
 }
 
+// Update inventory
 console.log("- Final inventory report -");
 products.forEach(product => {
     console.log(`Product data for ${product.name}:`);
